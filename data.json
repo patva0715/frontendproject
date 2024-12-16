@@ -1,0 +1,19 @@
+{
+    "projects": {
+      "project1": {
+        "title": "Project One",
+        "description": "This is an example project.",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "images": ["project1-img1.jpg", "project1-img2.jpg"],
+        "link": "https://example.com/project1"
+      },
+      "project2": {
+        "title": "Project Two",
+        "description": "Another example project.",
+        "technologies": ["React", "Node.js"],
+        "images": ["project2-img1.jpg"],
+        "link": "https://example.com/project2"
+      }
+    }
+  }
+  

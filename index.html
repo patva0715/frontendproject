@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/a7dfc038fa.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Valera Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page -->
+    <main>
+        <section id="home">
+            <img src="me.jpg" class="profile-pic" alt="Your Professional Photo">
+            <h1>Hi, I'm Patrick </h1>
+            <p>Aspiring Software Engineer</p>
+        </section>
+
+        <!-- About Page -->
+        <section id="about">
+            <!-- <h2>About Me</h2> -->
+            <p class="reg-text">I’m a Computer Science student passionate about coding, problem-solving, and building
+                innovative projects. With experience in software development and a love for learning, I aim to create
+                impactful solutions. Outside of academics, I enjoy gaming, exploring tech trends, and experimenting with
+                game development.</p>
+            <div class="techstack-container">
+                <div class="tech-container">
+                    <i class="fa-brands fa-react icon"></i>
+                    <span class="icon-text">React</span>
+                </div>
+                <div class="tech-container">
+                    <i class="fa-brands fa-html5 icon"></i>
+                    <span class="icon-text">HTML</span>
+                </div>
+                <div class="tech-container">
+                    <i class="fa-brands fa-css3 icon"></i>
+                    <span class="icon-text">CSS</span>
+                </div>
+                <div class="tech-container">
+                    <i class="fa-brands fa-js icon"></i>
+                    <span class="icon-text">Javascript</span>
+                </div>
+                <div class="tech-container">
+                    <i class="fa-brands fa-node icon"></i>
+                    <span class="icon-text">NodeJS</span>
+                </div>
+            </div>
+            <a href="resume.pdf" class="resume-button reg-text" download>View Resume</a>
+        </section>
+
+        <!-- Projects Page -->
+        <section id="projects">
+            <!-- <h2>Projects</h2> -->
+            <div class="project-stack-container">
+                <a href="project.html?project=ecommerce" class="project-container">
+                    <i class="fa-brands fa-html5 icon"></i>
+                    <h3 class="title">E-commerce</h3>
+                    <span class="description">A fullstack e-commerce web-app that displays store products.</span>
+                </a>
+                <a href="project.html?project=ecommerce" class="project-container">
+                    <i class="fa-brands fa-html5 icon"></i>
+                    <h3 class="title">E-commerce</h3>
+                    <span class="description">A fullstack e-commerce web-app that displays store products.</span>
+                </a>
+                <a href="project.html?project=ecommerce" class="project-container">
+                    <i class="fa-brands fa-html5 icon"></i>
+                    <h3 class="title">E-commerce</h3>
+                    <span class="description">A fullstack e-commerce web-app that displays store products.</span>
+                </a>
+                <a href="project.html?project=ecommerce" class="project-container">
+                    <i class="fa-brands fa-html5 icon"></i>
+                    <h3 class="title">E-commerce</h3>
+                    <span class="description">A fullstack e-commerce web-app that displays store products.</span>
+                </a>
+            </div>
+            <a href="resume.pdf" class="button reg-text" download>View All Projects</a>
+            <!-- Repeat project structure as needed -->
+        </section>
+
+        <!-- Skills Page -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Technical Skills</li>
+                <li>Non-Technical Skills</li>
+                <!-- Add more categories and skills as needed -->
+            </ul>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="submit-form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <ul>
+                <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+                <!-- Add more social links as needed -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

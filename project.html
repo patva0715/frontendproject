@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Details Template -->
+    <main id="project-details">
+        <section>
+            <h1 id="project-title">Project Title</h1>
+            <p id="project-description">Project description goes here. This section will include an overview of the
+                project, technologies used, challenges faced, and outcomes.</p>
+            <ul id="project-technologies">
+                <!-- List of technologies will be populated dynamically -->
+            </ul>
+            <div id="project-images">
+                <!-- Images or screenshots of the project will be populated dynamically -->
+            </div>
+            <a id="project-link" href="#" target="_blank">View Live Project</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to get URL parameter by name
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Retrieve the 'project' parameter
+        const projectName = getQueryParam('project');
+
+        // Fetch project data from data.json and display the details
+        async function fetchProjectDetails() {
+            try {
+                const response = await fetch('data.json'); // Path to your JSON file
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data.json');
+                }
+
+                const data = await response.json();
+                const projectData = data.projects[projectName]; // Access the project data
+
+                if (projectData) {
+                    displayProjectDetails(projectData);
+                } else {
+                    console.error(`Project "${projectName}" not found in data.json`);
+                    document.getElementById('project-details').innerHTML = `<p>Project not found.</p>`;
+                }
+            } catch (error) {
+                console.error('Error fetching project details:', error);
+            }
+        }
+
+        // Function to display project details on the page
+        function displayProjectDetails(projectData) {
+            document.getElementById('project-title').textContent = projectData.title || 'No Title Provided';
+            document.getElementById('project-description').textContent = projectData.description || 'No Description Provided';
+
+            const techList = document.getElementById('project-technologies');
+            techList.innerHTML = ""; // Clear previous content
+            (projectData.technologies || []).forEach(tech => {
+                const li = document.createElement('li');
+                li.textContent = tech;
+                techList.appendChild(li);
+            });
+
+            const imagesDiv = document.getElementById('project-images');
+            imagesDiv.innerHTML = ""; // Clear previous content
+            (projectData.images || []).forEach(img => {
+                const imgElement = document.createElement('img');
+                imgElement.src = img;
+                imgElement.alt = `${projectData.title} screenshot`;
+                imgElement.style.width = '100%';
+                imagesDiv.appendChild(imgElement);
+            });
+
+            const projectLink = document.getElementById('project-link');
+            projectLink.href = projectData.link || '#';
+            projectLink.textContent = projectData.link ? 'View Live Project' : 'No Link Available';
+        }
+
+        // Load project details
+        if (projectName) {
+            fetchProjectDetails();
+        } else {
+            console.error('No project parameter provided in the URL.');
+            document.getElementById('project-details').innerHTML = `<p>No project selected.</p>`;
+        }
+
+    </script>
+</body>
+
+</html>

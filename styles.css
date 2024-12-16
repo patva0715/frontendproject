@@ -1,0 +1,172 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+a,
+img,
+form,
+input,
+textarea,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+h2 {
+    font-size: 0.8rem;
+}
+a {
+    color: inherit; /* Inherit the color from the parent element */
+    transition-duration: 300ms;
+    text-decoration: none; /* Remove the underline */
+}
+
+a:hover,
+a:focus {
+    text-decoration: none; /* Ensure no underline on hover or focus */
+    color: #ffb36b;
+}
+/* Body and General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #e9e9e9;
+    background-color: #0f0f0f;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    font-size: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    justify-content: end;
+    gap: 0.4rem;
+    color: #9b9b9b;
+    border-bottom: 0.5px solid rgb(32, 32, 32);
+}
+.reg-text {
+    font-size: 0.6rem !important;
+    font-weight: 400 !important;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#home h1 {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+#home p {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    line-height: 0.6rem;
+}
+
+#about {
+    padding: 3rem;
+    background-color: #141414;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#about p {
+    max-width: 500px;
+    opacity: 0.6;
+    font-size: 0.5rem;
+}
+.resume-button {
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    border: 0.5px solid rgb(61, 61, 61);
+    color: #dbdbdb;
+    align-self: center;
+    transition-duration: 300ms;
+}
+.resume-button:hover {
+    color: #ffb36b;
+    background-color: #352414;
+}
+.profile-pic {
+    width: 3.5rem; /* Set the width of the circle */
+    height: 3.5rem; /* Set the height of the circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image is properly cropped */
+    filter: grayscale(100%); /* Apply grayscale filter */
+    transition: filter 0.3s ease; /* Smooth transition for effects */
+}
+
+.profile-pic:hover {
+    filter: grayscale(40%); /* Remove grayscale on hover */
+}
+.techstack-container{
+    opacity: .6;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.tech-container{
+    display: flex;
+    aspect-ratio: 1;
+    align-items: center;
+    gap:.4rem;
+}
+
+.tech-container .icon{
+font-size: 2rem;
+}
+.tech-container .icon-text{
+    font-size: .8rem;
+}
+
+#projects{
+    justify-content: center;
+    max-width: 600px;
+    margin: 3rem auto;
+}
+.project-stack-container{
+    gap:2rem;
+    display: flex;
+}
+.project-container{
+    gap:.35rem;
+    padding: .8rem;
+    aspect-ratio: .8;
+    background-color: #141414;
+    border: .5px solid #222222;
+    display: flex;
+    opacity: .8;
+    flex-direction: column;
+}
+.project-container .icon{
+    align-content: end;
+    flex-grow: 1;
+    font-size: .9rem;
+}
+.project-container .title{
+    flex-grow: 0;
+    font-size: .6rem;
+    font-weight: 500;
+}
+.project-container .description{
+    flex-grow: 0;
+    font-size: .4rem;
+    font-weight: 200;
+}
