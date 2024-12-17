@@ -26,7 +26,14 @@
     <!-- Home Page -->
     <main>
         <section id="home">
-            <img src="me.jpg" class="profile-pic" alt="Your Professional Photo">
+            <div class="img-link-container">
+                <img src="me.jpg" class="profile-pic" alt="Your Professional Photo">
+                <div class="link-container">
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </div>
+            </div>
             <h1>Hi, I'm Patrick </h1>
             <p>Aspiring Software Engineer</p>
         </section>
@@ -88,36 +95,37 @@
                     <span class="description">A fullstack e-commerce web-app that displays store products.</span>
                 </a>
             </div>
-            <a href="resume.pdf" class="button reg-text" download>View All Projects</a>
+            <div class="button-holder">
+                <a href="resume.pdf" class="button reg-text" download>View All Projects</a>
+            </div>
             <!-- Repeat project structure as needed -->
-        </section>
-
-        <!-- Skills Page -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Technical Skills</li>
-                <li>Non-Technical Skills</li>
-                <!-- Add more categories and skills as needed -->
-            </ul>
         </section>
 
         <!-- Contact Page -->
         <section id="contact">
-            <h2>Contact Me</h2>
             <form action="submit-form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Send</button>
+                <h2>Contact Me</h2>
+                <div class="field">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="field">
+                    <label for="mesFage">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send</button>
             </form>
-            <ul>
-                <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
-                <!-- Add more social links as needed -->
+            <ul class="link-container">
+                <a href="">
+                    <i class="fa-brands fa-github"></i><span>Github</span>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-linkedin"></i><span>Linkedin</span>
+                </a>
             </ul>
         </section>
     </main>
