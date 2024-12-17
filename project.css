@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.9;
+    color: #e9e9e9;
+    background-color: #0f0f0f;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit; /* Inherit the color from the parent element */
+    transition-duration: 300ms;
+    text-decoration: none; /* Remove the underline */
+}
+
+a:hover,
+a:focus {
+    text-decoration: none; /* Ensure no underline on hover or focus */
+    color: #ffb36b;
+}
+.back-button {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    border: 0.5px solid rgb(61, 61, 61);
+    color: #dbdbdb;
+    align-self: center;
+    transition-duration: 300ms;
+}
+.back-button:hover {
+    color: #ffb36b;
+    background-color: #352414;
+}
+#projects {
+    max-width: 900PX;
+    margin: 3rem auto;
+}
+.project-stack-container {
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-container {
+    flex-basis: 200px;
+    flex-basis:25%;
+    gap: 0.35rem;
+    padding: 0.8rem;
+    aspect-ratio: 0.8;
+    background-color: #141414;
+    border: 0.5px solid #222222;
+    display: flex;
+    opacity: 0.8;
+    flex-direction: column;
+}
+.project-container .icon {
+    align-content: end;
+    flex-grow: 1;
+    font-size: 1.3rem;
+}
+.project-container .title {
+    flex-grow: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.project-container .description {
+    flex-grow: 0;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+#projects .button-holder {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+#projects .button-holder a {
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    border: 0.5px solid rgb(61, 61, 61);
+    color: #dbdbdb;
+    align-self: center;
+    transition-duration: 300ms;
+}
+#projects .button-holder a:hover {
+    color: #ffb36b;
+    background-color: #352414;
+}

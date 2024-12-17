@@ -14,11 +14,9 @@
     <header>
         <nav class="nav-bar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,8 +27,8 @@
             <div class="img-link-container">
                 <img src="me.jpg" class="profile-pic" alt="Your Professional Photo">
                 <div class="link-container">
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://github.com/patva0715"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/patrick-valera-285225223/"><i class="fa-brands fa-linkedin"></i></a>
 
                 </div>
             </div>
@@ -67,7 +65,13 @@
                     <span class="icon-text">NodeJS</span>
                 </div>
             </div>
-            <a href="resume.pdf" class="resume-button reg-text" download>View Resume</a>
+            <ul class="skillstack-container">
+                <li><i class="fa-regular fa-clock"></i>Time Management</li>
+                <li><i class="fa-solid fa-people-group"></i>Team Collaboration</li>
+                <li><i class="fa-solid fa-boxes-stacked"></i>Multitasking</li>
+                <li><i class="fa-brands fa-slideshare"></i>Presentation Skills</li>
+            </ul>
+            <a href="resume_patrickv.pdf" target="_blank" class="resume-button reg-text">View Resume</a>
         </section>
 
         <!-- Projects Page -->
@@ -75,28 +79,28 @@
             <!-- <h2>Projects</h2> -->
             <div class="project-stack-container">
                 <a href="project.html?project=ecommerce" class="project-container">
-                    <i class="fa-brands fa-html5 icon"></i>
+                    <i class="fa-solid fa-cart-shopping icon"></i>
                     <h3 class="title">E-commerce</h3>
                     <span class="description">A fullstack e-commerce web-app that displays store products.</span>
                 </a>
                 <a href="project.html?project=ecommerce" class="project-container">
-                    <i class="fa-brands fa-html5 icon"></i>
-                    <h3 class="title">E-commerce</h3>
-                    <span class="description">A fullstack e-commerce web-app that displays store products.</span>
+                    <i class="fa-solid fa-calendar-days icon"></i>
+                    <h3 class="title">Todo List</h3>
+                    <span class="description">A todo list that allows user to enter and mark as complete their tasks.</span>
                 </a>
                 <a href="project.html?project=ecommerce" class="project-container">
-                    <i class="fa-brands fa-html5 icon"></i>
-                    <h3 class="title">E-commerce</h3>
-                    <span class="description">A fullstack e-commerce web-app that displays store products.</span>
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <h3 class="title">Messaging App</h3>
+                    <span class="description">An app that alloW users to message other users and store their messages. </span>
                 </a>
                 <a href="project.html?project=ecommerce" class="project-container">
-                    <i class="fa-brands fa-html5 icon"></i>
-                    <h3 class="title">E-commerce</h3>
-                    <span class="description">A fullstack e-commerce web-app that displays store products.</span>
+                    <i class="fa-solid fa-user icon"></i>
+                    <h3 class="title">Portfolio Page</h3>
+                    <span class="description">A personal portfolio page that showcase my skills and projects</span>
                 </a>
             </div>
             <div class="button-holder">
-                <a href="resume.pdf" class="button reg-text" download>View All Projects</a>
+                <a href="projects.html" class="button reg-text">View All Projects</a>
             </div>
             <!-- Repeat project structure as needed -->
         </section>
@@ -132,7 +136,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2024 Patrick Valera. All Rights Reserved.</p>
     </footer>
 </body>
 
